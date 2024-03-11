@@ -6,7 +6,7 @@
 docker network create jenkins
 ```
 
-#### Download and run the docker:dind
+#### Download and run docker:dind
 
 ```bash
 docker run \
@@ -61,7 +61,7 @@ make run-jenkins
 
 ### Post-installation setup
 
-1. Browse to http://localhost:8080
+1. Browse to http://127.0.0.1:8080/
    <img src="./docs/unloc-jenkins.png"/>
 2. In terminal:
 

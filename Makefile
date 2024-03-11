@@ -1,4 +1,4 @@
-.PHONY : add-network add-docker-dind build-jenkins run-jenkins javah
+.PHONY : add-network add-docker-dind build-jenkins run-jenkins
 
 add-network: 
 		docker network create jenkins

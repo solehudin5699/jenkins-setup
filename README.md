@@ -1,4 +1,4 @@
-### Installation Jenkins with docker
+### Installation Jenkins with Docker
 
 #### Create bridge network
 
@@ -48,6 +48,17 @@ docker run \
   solehudin5699/jenkins-blueocean:2.440.1-1
 ```
 
+---
+
+### Or, use makefile to simplify installation
+
+```bash
+make add-network
+make add-docker-dind
+make build-jenkins
+make run-jenkins
+```
+
 ### Post-installation setup
 
 1. Browse to http://localhost:8080
@@ -55,10 +66,8 @@ docker run \
 2. In terminal:
 
    ```bash
-   docker exec -it jenkins-blueocean /bin/sh
-
-   # get password in container:
-   cat /var/jenkins_home/secrets/initialAdminPassword
+   # get password
+   docker exec jenkins-blueocean cat /var/jenkins_home/secrets/initialAdminPassword
    ```
 
    Copy paste password to continue the setup wizard.

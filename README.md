@@ -30,7 +30,7 @@ docker run \
 docker build -t solehudin5699/jenkins-blueocean:2.440.1-1 .
 ```
 
-#### Run solehudin5699/jenkins-blueocean:2.440.1-1 as a container
+#### Create & run container jenkins
 
 ```bash
 docker run \

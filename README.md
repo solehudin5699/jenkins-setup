@@ -6,7 +6,7 @@
 docker network create jenkins
 ```
 
-#### Download and run docker:dind
+<!-- #### Download and run docker:dind
 
 ```bash
 docker run \
@@ -22,7 +22,7 @@ docker run \
   --publish 2376:2376 \
   docker:dind \
   --storage-driver overlay2
-```
+``` -->
 
 #### Customize the official Jenkins Docker image from Dockerfile, and assign the image a meaningful name, such as "solehudin5699/jenkins-blueocean:2.440.1-1"
 
@@ -38,7 +38,7 @@ docker run \
   --restart=on-failure \
   --detach \
   --network jenkins \
-  --env DOCKER_HOST=tcp://docker:2376 \
+  --env DOCKER_HOST=tcp://docker:2375 \
   --env DOCKER_CERT_PATH=/certs/client \
   --env DOCKER_TLS_VERIFY=1 \
   --publish 8080:8080 \
@@ -54,7 +54,6 @@ docker run \
 
 ```bash
 make add-network
-make add-docker-dind
 make build-jenkins
 make run-jenkins
 ```
